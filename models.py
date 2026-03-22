@@ -1,14 +1,15 @@
 # models.py
 
 from datetime import datetime, timezone
-from sqlalchemy import Boolean, DateTime, Index, String, Text
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy import Boolean, DateTime, Index, String, Text, desc
+from sqlalchemy.orm import Mapped, mapped_column, declared_attr
 
 from database import Base
 
 
 class Article(Base):
     __tablename__ = "articles"
+    # __mapper_args__ = {"order_by": lambda: desc(Article.published_at)}
 
     id:           Mapped[int]      = mapped_column(primary_key=True, autoincrement=True)
     url_hash:     Mapped[str]      = mapped_column(String(32), unique=True, nullable=False)
