@@ -38,5 +38,11 @@ RSS_FEEDS = [
         "source_id": "eucom",
         "is_military": True,
     },
-    
+    {
+        "name": "Dept. of War",
+        "url": "https://war.gov/DesktopModules/ArticleCS/RSS.ashx?max=25&ContentType=1&Site=945",
+        "region": "global",
+        "source_id": "dow",
+        "is_military": True,
+    },
 ]

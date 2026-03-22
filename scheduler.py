@@ -21,6 +21,7 @@ def start_scheduler():
         max_instances=1,           # never overlap if a run runs long
         misfire_grace_time=60,     # tolerate up to 60s of lateness
     )
+    
 
     scheduler.start()
     logger.info("Scheduler started — RSS ingest every 15 minutes")
