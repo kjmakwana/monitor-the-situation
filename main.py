@@ -4,9 +4,12 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes.news import router as news_router
+from routes.markets import router as markets_router
 from database import init_db
 import models  
 from scheduler import start_scheduler, stop_scheduler
+from dotenv import load_dotenv
+load_dotenv()
 
 import logging
 
@@ -35,3 +38,4 @@ app.add_middleware(
 )
 
 app.include_router(news_router)
+app.include_router(markets_router)

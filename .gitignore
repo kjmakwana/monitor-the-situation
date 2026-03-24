@@ -29,6 +29,9 @@ htmlcov/
 *.ipynb
 .ipynb_checkpoints/
 
+# Secrets / local config
+.env
+
 # Local databases and runtime files
 *.db
 *.sqlite
