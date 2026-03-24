@@ -48,7 +48,7 @@ class MarketPrice(Base):
     __tablename__ = "market_prices"
  
     id:          Mapped[int]      = mapped_column(Integer, primary_key=True, autoincrement=True)
-    label:       Mapped[str]      = mapped_column(String(32),  nullable=False)  # e.g. "BRENT", "SP500"
+    label:       Mapped[str]      = mapped_column(String(32),  nullable=False, unique=True)  # e.g. "BRENT", "SP500"
     symbol:      Mapped[str]      = mapped_column(String(32),  nullable=False)  # e.g. "BZ=F", "^GSPC"
     asset_type:  Mapped[str]      = mapped_column(String(16),  nullable=False)  # "commodity" | "forex" | "equity"
     price:       Mapped[float]    = mapped_column(Float,       nullable=False)

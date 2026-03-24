@@ -1,4 +1,7 @@
 # main.py
+from dotenv import load_dotenv
+load_dotenv()
+
 
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
@@ -8,8 +11,7 @@ from routes.markets import router as markets_router
 from database import init_db
 import models  
 from scheduler import start_scheduler, stop_scheduler
-from dotenv import load_dotenv
-load_dotenv()
+
 
 import logging
 

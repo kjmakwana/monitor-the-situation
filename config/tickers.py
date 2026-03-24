@@ -31,7 +31,6 @@ COMMODITY_TICKERS = {
     "NATGAS": "NG=F",     # Natural Gas (Europe linkage)
     "COTTON": "CT=F",     # Cotton (S Asia linkage)
     "COCOA":  "CC=F",     # Cocoa (Africa/West Africa linkage)
-    "PALMOIL":"FCPO=F",   # Palm Oil futures (SE Asia linkage)
 }
 
 # ---------------------------------------------------------------------------
@@ -120,10 +119,10 @@ KEYWORD_TICKER_MAP = {
     "chip":         ["NIKKEI", "HSI", "SP500"],
 
     # --- SE Asia ---
-    "strait of malacca": ["BRENT", "USDSGD", "PALMOIL"],
+    "strait of malacca": ["BRENT", "USDSGD"],
     "singapore":    ["USDSGD"],
-    "indonesia":    ["PALMOIL", "USDSGD"],
-    "malaysia":     ["PALMOIL", "USDSGD"],
+    "indonesia":    ["USDSGD"],
+    "malaysia":     ["USDSGD"],
     "philippines":  ["USDSGD"],
     "myanmar":      ["USDSGD"],
 
