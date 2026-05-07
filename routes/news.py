@@ -52,6 +52,7 @@ def get_news(
                 "is_military":  a.is_military,
                 "summary":      a.summary,
                 "published_at": a.published_at.isoformat(),
+                "tickers":      a.tickers,
             }
             for a in articles
         ],
